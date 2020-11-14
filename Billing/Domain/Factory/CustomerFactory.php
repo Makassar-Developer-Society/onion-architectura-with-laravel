@@ -9,7 +9,7 @@ class CustomerFactory
 {
     public function CreateCustomerEntity(Email $email,Name $name)
     {
-        $customer = new Customer;
+        $customer = new Customer();
         $customer->setEmail($email);
         $customer->setName($name);
         $customer->setUpdatedAt();

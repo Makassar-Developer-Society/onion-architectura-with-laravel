@@ -11,5 +11,5 @@ interface RepositoryInterface
     public function persist(AbstractEntity $entity);
     public function begin();
     public function commit();
-    public function remove($id);
+    public function remove(AbstractEntity $entity);
 }

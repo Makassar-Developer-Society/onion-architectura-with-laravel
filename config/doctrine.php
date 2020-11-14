@@ -25,7 +25,7 @@ return [
             'dev'           => env('APP_DEBUG', false),
             'meta'          => env('DOCTRINE_METADATA', 'annotations'),
             'connection'    => env('DB_CONNECTION', 'mysql'),
-            'namespaces'    => [],
+            'namespaces'    => ['Billing\Domain\Entity'],
             'paths'         => [
                 base_path('Billing/Domain/Entity')
             ],

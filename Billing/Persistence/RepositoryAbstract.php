@@ -6,19 +6,19 @@ use Billing\Domain\Repository\RepositoryInterface;
 use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 
-abstract class AbstractRepository implements RepositoryInterface
+abstract class RepositoryAbstract implements RepositoryInterface
 {
     protected $entity;
     protected $entityClass;
 
-    public function __construct(EntityManager $entity)
+    public function __construct(EntityManagerInterface $entity)
     {
         $this->entity = $entity;
     }
 
     public function findById($id)
     {
-        $result = $this->entity->find($this->$entityClass,$id);
+        $result = $this->entity->find($this->entityClass,$id);
         return $result;
     }
 
@@ -54,10 +54,9 @@ abstract class AbstractRepository implements RepositoryInterface
 		return $this;
 	}
 
-	public function remove($id)
+	public function remove(AbstractEntity $entity)
 	{
-		$result = $this->entity->find($this->entityClass, $id);
-		$this->entity->remove($result);
+		$this->entity->remove($entity);
 		return $this;
 	}
 }

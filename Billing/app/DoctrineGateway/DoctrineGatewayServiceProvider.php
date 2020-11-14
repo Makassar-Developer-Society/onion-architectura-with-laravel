@@ -2,7 +2,7 @@
 namespace Billing\App\DoctrineGateway;
 
 use App\Providers\AppServiceProvider;
-
+use Doctrine\ORM\EntityManagerInterface;
 
 class DoctrineGatewayServiceProvider extends AppServiceProvider
 {

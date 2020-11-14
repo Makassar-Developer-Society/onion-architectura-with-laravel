@@ -1,8 +1,8 @@
 <?php
 namespace Billing\Domain\Entity;
 
-use Billing\Domain\Value\Email;
 use Billing\Domain\Value\Name;
+use Billing\Domain\Value\Email;
 
 /**
  * @Entity
@@ -25,15 +25,15 @@ class Customer extends AbstractEntity
 	 */
     protected $email;
 
-    /**
-	 * @Column(type="string")
-	 * @Column(length=100)
-	 */
-    protected $role;
+    // /**
+	//  * @Column(type="string")
+	//  * @Column(length=100)
+	//  */
+    // protected $role;
 
     public function setName(Name $name)
     {
-        $this->name = $name;
+        $this->name = $name->getName();
         return $this;
     }
 
@@ -44,7 +44,7 @@ class Customer extends AbstractEntity
 
     public function setEmail(Email $email)
     {
-        $this->email = $email;
+        $this->email = $email->getEmail();
         return $this;
     }
 

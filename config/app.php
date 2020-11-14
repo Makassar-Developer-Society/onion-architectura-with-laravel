@@ -177,6 +177,7 @@ return [
         LaravelDoctrine\ORM\DoctrineServiceProvider::class,
         Billing\App\DoctrineGateway\DoctrineGatewayServiceProvider::class,
         Billing\App\BillingServiceProvider\BillingServiceProvider::class,
+        // LaravelDoctrine\Migrations\MigrationsServiceProvider::class,
 
     ],
 

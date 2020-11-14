@@ -6,10 +6,10 @@ class Email
     protected $email="";
     public function __construct(string $email)
     {
-        $this->Email = $email;
+        $this->email = $email;
     }
 
     public function getEmail(){
-        return $this->Email;
+        return $this->email;
     }
 }

@@ -42,7 +42,8 @@ class CustomerService
 	public function update(Id $id, Name $name, Email $email)
 	{
 		$customer = $this->customerRepository->findById($id->getId());
-		//please add your request validation
+        //please add your request validation
+        
 		if ($customer) {
 			$customer->setName($name);
 			$customer->setEmail($email);
